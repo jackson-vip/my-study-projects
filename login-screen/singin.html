@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singin</title>
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="css/chat-gpt.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- js -->
+    <script src="js/script.js" defer></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/5873fec248.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <article class="box-card">
+            <div class="column-left">
+                <h2 class="title text-card-1">Welcome Back!</h2>
+                <img src="assets/signUp.png" alt="Sign in" class="img-cd-2">
+                <p class="description description-card-1">To keep connnected with us.</p>
+                <p class="description description-card-1">please login with your personal info</p>
+                <a href="login.html">
+                    <button class="btn btn-primary">sign in</button>
+                </a>
+            </div>
+
+            <div class="column-right">
+                <h2 class="title text-card-2"> Create Account</h2>
+                <div class="social-media">
+                    <ul>
+                        <a href="#">
+                            <li><i class="fab fa-facebook-f"></i></li>
+                        </a>
+                        <a href="#">
+                            <li><i class="fab fa-google-plus-g"></i></li>
+                        </a>
+                        <a href="#">
+                            <li><i class="fab fa-linkedin-in"></i></li>
+                        </a>
+                    </ul>
+                </div> <!-- social-media -->
+
+                <p class="description description-card-2">Or use your email for registration:</p>
+
+                <form action="" method="get" class="form" id="singin">
+                    <label for="name">
+                        <i class="fa-regular fa-user icon-modify"></i>
+                        <input id="name" name="nome" type="text" placeholder="Nome" required>
+                    </label>
+                    <label for="email">
+                        <i class="fa-regular fa-envelope icon-modify"></i>
+                        <input id="email" name="email" type="email" placeholder="Email" required>
+                    </label>
+                    <label for="pwd">
+                        <i class="fa-solid fa-lock icon-modify"></i>
+                        <input id="pwd" name="pwd" type="password" placeholder="Password" required autocomplete="off">
+                    </label>
+                    <button type="submit" class="btn btn-second">sign up</button>
+                </form>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
