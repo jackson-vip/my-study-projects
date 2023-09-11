@@ -17,21 +17,19 @@
 
 <body>
     <div class="container">
-
         <article class="box-card">
             <div class="column-left">
                 <h2 class="title text-card-1">Welcome Back!</h2>
-                <img src="assets/signUp.png" alt="Sign in" class="img-cd-2">
+                <img src="assets/signUp.png" alt="Sign in" class="img-left-2">
                 <p class="description description-card-1">To keep connnected with us.</p>
                 <p class="description description-card-1">please login with your personal info</p>
                 <a href="login.html">
                     <button class="btn btn-primary">sign in</button>
                 </a>
             </div>
-
             <div class="column-right">
                 <h2 class="title text-card-2"> Create Account</h2>
-                <div class="social-media">
+                <div class="social-media"> <!-- social-media -->
                     <ul>
                         <a href="#">
                             <li><i class="fab fa-facebook-f"></i></li>
@@ -43,23 +41,50 @@
                             <li><i class="fab fa-linkedin-in"></i></li>
                         </a>
                     </ul>
-                </div> <!-- social-media -->
-
+                </div>
                 <p class="description description-card-2">Or use your email for registration:</p>
-
-                <form action="" method="get" class="form" id="singin">
+                <form action="" name="registerUsers" class="form">
                     <label for="name">
-                        <i class="fa-regular fa-user icon-modify"></i>
+                        <i class="fa-regular fa-user"></i>
                         <input id="name" name="nome" type="text" placeholder="Nome" required>
                     </label>
                     <label for="email">
-                        <i class="fa-regular fa-envelope icon-modify"></i>
-                        <input id="email" name="email" type="email" placeholder="Email" required>
+                        <i class="fa-regular fa-envelope"></i>
+                        <input id="email" name="email" type="email" placeholder="Email" required onblur="validacaoEmail(registerUsers.email)" >
                     </label>
-                    <label for="pwd">
-                        <i class="fa-solid fa-lock icon-modify"></i>
-                        <input id="pwd" name="pwd" type="password" placeholder="Password" required autocomplete="off">
+                    <label for="pwd" id="label-i">
+                        <i class="fa-solid fa-lock "></i>
+                        <input id="pwd" name="pwd" type="password" placeholder="Password" required
+                            oninput="textChange()">
+                        <span class="showPass" onclick="toggle()">
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-eye-slash hidden"></i>
+                        </span>
                     </label>
+                    <div class="validator"> <!-- Valida Login -->
+                        <span id="msg"></span>
+                        <p>Follow the tips to generate secure and strong passwords :</p>
+                        <p id="capital">
+                            <i class="fas fa-times"></i>
+                            <i class="fas fa-check"></i>
+                            <span>Upper Case</span>
+                        </p>
+                        <p id="special-char">
+                            <i class="fas fa-times"></i>
+                            <i class="fas fa-check"></i>
+                            <span>Special Character</span>
+                        </p>
+                        <p id="number">
+                            <i class="fas fa-times"></i>
+                            <i class="fas fa-check"></i>
+                            <span>Number</span>
+                        </p>
+                        <p id="more-than-8">
+                            <i class="fas fa-times"></i>
+                            <i class="fas fa-check"></i>
+                            <span>More than 8 characters</span>
+                        </p>
+                    </div>
                     <button type="submit" class="btn btn-second">sign up</button>
                 </form>
             </div>

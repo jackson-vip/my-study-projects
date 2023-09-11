@@ -18,21 +18,19 @@
 
 <body>
     <div class="container">
-
         <div class="box-card">
             <div class="column-left">
                 <h2 class="title text-left">Hello, Friend!</h2>
-                <img src="assets/signIn.png" alt="login" class="img-cd-1">
+                <img src="assets/signIn.png" alt="login" class="img-left">
                 <p class="description desc-left">Enter your personal details</p>
                 <p class="description desc-left">and start journey with us</p>
                 <a href="singin.html">
                     <button class="btn btn-primary">sign up</button>
                 </a>
             </div>
-
             <div class="column-right">
                 <h2 class="title text-right"> Sign In To Developer</h2>
-                <div class="social-media">
+                <div class="social-media"> <!-- social-media -->
                     <ul>
                         <a href="#">
                             <li><i class="fab fa-facebook-f"></i></li>
@@ -44,11 +42,9 @@
                             <li><i class="fab fa-linkedin-in"></i></li>
                         </a>
                     </ul>
-                </div> <!-- social-media -->
-
+                </div> 
                 <p class="description descr-right">Or use your email account:</p>
-
-                <form class="form" id="login">
+                <form class="form">
                     <label for="email">
                         <i class="far fa-envelope icon-modify"></i>
                         <input id="email" type="email" placeholder="email" required>
@@ -56,10 +52,14 @@
                     <label for="pwd">
                         <i class="fas fa-lock icon-modify"></i>
                         <input id="pwd" type="password" placeholder="password" required autocomplete="off">
+                        <span class="showPass" onclick="toggle()">
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-eye-slash hidden"></i>
+                        </span>
                     </label>
                     <button class="btn btn-second" type="submit">sign in</button>
                 </form>
-                <a class="forgotPassw" href="#">Forgot password?</a>
+                <a href="#">Forgot password?</a>
             </div>
         </div>
 
